@@ -3,6 +3,10 @@
 	position relative
 	background: url('../img/backs/if.svg') no-repeat center
 	background-size: cover
+	@media screen and (max-width 560px)
+		padding 60px 0
+	@media screen and (max-width 386px)
+		padding 40px 0
 // .general-img-if
 // 	position absolute
 // 	top -117px
@@ -27,12 +31,17 @@
 	flex-direction row
 	&:last-of-type
 		justify-content: space-around
+	@media screen and (max-width 991px)
+		flex-wrap: wrap
 .if-item
 	width 100%
 	max-width 280px
 	margin 0 0 50px
 	position relative
 	z-index 30
+	@media screen and (max-width 560px)
+		margin-bottom: 35px
+		max-width none
 	&-img
 		display block
 		margin 0 auto 10px
@@ -40,3 +49,8 @@
 		text-align center
 		span
 			font-weight: bold
+.general-title-if
+	@media screen and (max-width 560px)
+		margin 35px 0 50px
+	@media screen and (max-width 386px)
+		margin 0 0 35px

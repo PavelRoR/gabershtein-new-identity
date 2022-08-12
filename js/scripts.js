@@ -1,29 +1,29 @@
 $(document).ready(function () {
-    // function cookClear(){
-    //     $('.button-cookies-no').on('click', function(){
-    //         localStorage.removeItem('cook','cookYes');
-    //         $.fancybox.close( $('.modal-cookies'));
-    //     });
-    // }
-    // function cookSet(){
-    //     $('.button-cookies-yes').on('click', function(){
-    //         localStorage.setItem('cook','cookYes');
-    //         $.fancybox.close( $('.modal-cookies'));
-    //     });
-    // }
-    // cookClear();
-    // cookSet();
+    function cookClear(){
+        $('.button-cookies-no').on('click', function(){
+            localStorage.removeItem('cook','cookYes');
+            $.fancybox.close( $('.modal-cookies'));
+        });
+    }
+    function cookSet(){
+        $('.button-cookies-yes').on('click', function(){
+            localStorage.setItem('cook','cookYes');
+            $.fancybox.close( $('.modal-cookies'));
+        });
+    }
+    cookClear();
+    cookSet();
 
-    // $('.button-cookies-yes').attr('disabled', !$('.check-cookies').prop('checked'));
-    // $('.check-cookies').change(function(){
-    //     $('.button-cookies-yes').attr('disabled', !$('.check-cookies').prop('checked'));
-    // });
-    // if (!localStorage.getItem('cook','cookYes')){
-    //     $.fancybox.open( $('.modal-cookies'));
-    //     cookSet();
-    //     cookClear();
+    $('.button-cookies-yes').attr('disabled', !$('.check-cookies').prop('checked'));
+    $('.check-cookies').change(function(){
+        $('.button-cookies-yes').attr('disabled', !$('.check-cookies').prop('checked'));
+    });
+    if (!localStorage.getItem('cook','cookYes')){
+        $.fancybox.open( $('.modal-cookies'));
+        cookSet();
+        cookClear();
+    }
 
-    // }
     // модалка
     $('.button-up').fancybox();
     // слайдер с видео-отзывами

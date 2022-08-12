@@ -4,10 +4,20 @@
 	background-size: cover
 	position relative
 	z-index 10
+	@media screen and (max-width 991px)
+		padding 0
 .author-img
 	position absolute
 	right 100px
 	bottom: 0
+	@media screen and (max-width 1199px)
+		right 0
+	@media screen and (max-width 991px)
+		position static
+		display block
+		width 100%
+		max-width 510px
+		margin 0 auto 35px
 .author-info
 	background: url('../img/images/author.png') no-repeat center right
 	// background-size: cover
@@ -16,8 +26,17 @@
 	position relative
 	top 0
 	left 200px
+	@media screen and (max-width 1199px)
+		left 100px
+	@media screen and (max-width 991px)
+		width 100%
+		left 0
+		background: none
+		min-height 1px
 .general-list-author
 	padding-top: 50px
+	@media screen and (max-width 991px)
+		padding-top: 0
 	li
 		text-align right
 		padding 0 25px 0 0
@@ -38,3 +57,24 @@
 			margin-left: -35px
 		&:last-child
 			margin-left: 3px
+		@media screen and (max-width 991px)
+			text-align: left
+			padding 0 0 20px 25px
+			margin-bottom: 20px
+			position relative
+			margin-bottom: 0
+			margin-left: 0 !important
+			background-position: top left
+			max-width none
+			&:before
+				content: ''
+				display block
+				position absolute
+				width 2px
+				height: calc(100% - 20px);
+				top: 20px;
+				left: 9px;
+				background-color: #F6A1A2
+			&:last-child
+				&:before
+					content: none
