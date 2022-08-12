@@ -1,8 +1,9 @@
 section#video
-	+imgs('general-img general-img-video', 'img/images/clouds.png', 'Облака')
+	+imgs('general-img general-img-video', 'img/images/clouds.svg', 'Облака')
 	.container
-		.content
+		.content.content-video
 			+gt('', '', 'ВИДЕО приглашение', 'от юлии габерштейн')
-			.video-wrapper.video-wrapper-video
+			.video-wrapper.video-wrapper-video(data-youtube='b8JaheTk3rI')
 				+imgs('', 'img/images/video.png', 'Видео')
+				//- iframe(src='https://youtube.com/embed/b8JaheTk3rI')
 				.play-button
