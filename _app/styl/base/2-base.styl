@@ -1,3 +1,4 @@
+/*! Base */
 *
 	margin 0
 	padding 0
@@ -8,6 +9,17 @@ body
 	color #000
 	background-color #fff
 	line-height: 1.56
+// .container
+// 	@media screen and (min-width 1440px)
+// 		max-width 1440px
+// 		width 98%
+	// @media screen and (max-width 1229px)
+	// 	width 98%
+.wrapper
+	overflow hidden
+.content
+	position relative
+	z-index 90
 a
 	color: #000
 	&:focus
@@ -15,7 +27,7 @@ a
 		text-decoration none
 	&:hover
 		text-decoration none
-h1,h2,h3,h4,h5,h6
+h1, h2, h3, h4, h5, h6
 	font-weight normal
 	margin 0
 button
@@ -25,6 +37,10 @@ header
 footer
 	width 100%
 	display block
+section
+	width 100%
+	max-width 1440px
+	margin 0 auto
 .video-wrapper
 	margin 0 auto
 	position relative
@@ -51,8 +67,8 @@ footer
 		width 100%
 		height 100%
 		display block
-		background-color #000
-		border-radius 0
+		background-color #282828;
+		border-radius: 40px;
 		border: 0
 		top 0
 		left 0
@@ -60,18 +76,105 @@ footer
 		bottom 0
 		cursor pointer
 		margin 0 auto
+.play-button
+	width 144px
+	height 144px
+	background: linear-gradient(100.81deg, rgba(255, 255, 255, 0) 19.32%, rgba(255, 255, 255, 0.42) 49.18%, rgba(255, 255, 255, 0) 80.6%), linear-gradient(95.11deg, #FB9B9D 2.26%, #F49799 96.16%);
+	border: 4px solid #FBB3B4;
+	box-shadow: 0px 63px 18px rgba(255, 168, 171, 0.01), 0px 40px 16px rgba(255, 168, 171, 0.06), 0px 23px 14px rgba(255, 168, 171, 0.19), 0px 10px 10px rgba(255, 168, 171, 0.32), 0px 3px 6px rgba(255, 168, 171, 0.37), 0px 0px 0px rgba(255, 168, 171, 0.37);
+	border-radius: 50%;
+	position absolute
+	top calc(50% - 72px)
+	left 0
+	right 0
+	margin 0 auto
+	cursor pointer
+	transition: all .4s ease
+	&:after
+		content: ''
+		display block
+		position absolute
+		width 40px
+		height: 40px
+		left 57px
+		top 52px
+		// margin 0 auto
+		border: 20px solid transparent
+		border-left: 30px solid #fff
+	&:hover
+		opacity .9
+	&&-rev
+		width 72px
+		height: 72px
+		top calc(50% - 36px)
+		&:after
+			width 20px
+			height: 20px
+			border: 10px solid transparent
+			border-left: 15px solid #fff
+			top 23px
+			left 27px
 .button
-	display block
-	text-align center
+	&-wrapper
+		&-center
+			text-align center
+	display inline-block
 	margin 0 auto
 	text-decoration none
 	color: #fff
-	width: 100%
+	width: auto
+	border: rgba(251, 179, 180, 1)
+	background-image: linear-gradient(95.11deg, #FB9B9D 2.26%, #F49799 96.16%);
+	box-shadow: 0px 13px 96px 0px rgba(22, 16, 22, 0.15), 0px 6px 0px 0px rgba(253, 154, 156, 1), 0px 16px 16px -6px rgba(255, 255, 255, 0.28) inset;
+	border-radius: 11px
+	font-weight: 500
+	text-transform uppercase
+	text-align center
+	padding: 50px 90px 40px
+	letter-spacing: 0.3em;
+	text-shadow: 0px -5px 8px rgba(255, 255, 255, 0.38);
+	transition: all .9s ease
+	position relative
+	overflow hidden
+	&:before
+		content: ''
+		display block
+		width 100%
+		height: 100%
+		position absolute
+		top 0
+		left 0
+		background-image: linear-gradient(100.81deg, rgba(255, 255, 255, 0) 19.32%, rgba(255, 255, 255, 0.42) 49.18%, rgba(255, 255, 255, 0) 80.6%)
+		transition: all .1s ease
+	span
+		position relative
+		z-index 10
+	img
+		display inline-block
+		margin-right: 12px
+		vertical-align bottom
 	&:focus
 		text-decoration none
 		color #fff
 	&:hover
+		transform: translateY(4px)
 		text-decoration none
 		color #fff
+		box-shadow: 0px 13px 46px 0px rgba(22, 16, 22, 0.5), 0px 6px 0px 0px rgba(253, 154, 156, 1), 0px 16px 16px -6px rgba(255, 255, 255, 0.28) inset;
+		&:before
+			left 100%
 .general-title
 	text-align center
+	font-family: B
+	font-size: 40px
+	text-transform uppercase
+	color: #4D4D4D;
+	margin-bottom: 40px
+	line-height: 100%
+	span
+		color #B0CBAA
+	small
+		display block
+		font-size: 30px
+	&-left
+		text-align left
