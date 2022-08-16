@@ -1,0 +1,21 @@
+mixin fi(n,b,p)
+	.for-item(class="for-item-"+n)
+		+imgs('for-item-img if-item-img'+n, 'img/images/if-'+n+'.png', b+p)
+		p.for-item-text
+			span!=b
+			!=p
+
+section#for
+	+imgs('general-img general-img-for', 'img/images/clouds.svg', 'Облака')
+	//- +imgs('general-img general-img-if', 'img/backs/if.svg', '')
+	.container
+		.content
+			+imgs('general-img general-img-for-1', 'img/images/if-img-1.png', 'Лепестки')
+			+imgs('general-img general-img-for-2', 'img/images/if-img-2.png', 'Лепестки')
+			+gt('', 'Этот курс необходим тем, кто хочет:')
+			.for-items
+				+fi('5', 'изменить себя', '  и&nbsp;стать своей улучшенной версией')
+				+fi('2', 'не мечтать о&nbsp;лучшей жизни,', ' а&nbsp;научиться проживать жизнь своей мечты')
+				+fi('6', 'улучшить', ' взаимоотношения в&nbsp;паре, с&nbsp;окружающими людьми и&nbsp;миром')
+				+fi('3', 'увеличить', ' свой доход, получить новую должность или сменить сферу своей деятельности')
+			+b('button-wrapper-center','', href, 'Мне это неоходимо!')

@@ -1,0 +1,47 @@
+-var path = '../';
+-var head_url = 'https://landings.gaberstein.de/new-identity/course/';
+-var head_title = '«Новая идентичность»';
+-var head_description = 'Трансформационный курс Юлии Габерштейн';
+//-var head_img = 'img/banner.jpg';
+-var styles = path+'css/course.min.css';
+-var fav_ap = path+'favicon.svg';
+-var fav_ico = path+'favicon.ico';
+-var fav_png = path+'favicon.png';
+-var libs = path+'js/courseLibs.min.js';
+-var scripts = path+'js/course.min.js';
+-var href = '#price';
+
+mixin b(wcl,cl, href, p, target, id)
+	.button-wrapper(class=wcl)
+		a.button(class=cl href!=href target=target id=id)
+			span
+				+imgs('', 'img/images/finger.png', '')
+				=p
+mixin imgs(cl, src, alt)
+	img(class=cl src=path+src alt=alt)
+mixin gt(cl, h3, sp, sm)
+	h3.general-title(class=cl)
+		!=h3
+		if sp
+			span!=sp
+		if sm
+			small!=sm
+
+doctype html
+html(lang="ru")
+	head
+		include pug/head
+		//- include pug/scripts/head_scripts
+	body
+		//- include pug/scripts/body_top_scripts
+		.wrapper
+			include pug/course/1-main
+			include pug/course/2-for
+			include pug/course/3-plan
+			include pug/course/4-prices
+			include pug/course/5-get
+			include pug/main/6-author
+			include pug/main/7-revs
+		include pug/base/2-footer
+		include pug/base/3-scripts
+		//- include pug/scripts/body_bottom_scripts

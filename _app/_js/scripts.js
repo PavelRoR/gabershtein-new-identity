@@ -1,13 +1,13 @@
 $(document).ready(function () {
     function cookClear(){
         $('.button-cookies-no').on('click', function(){
-            localStorage.removeItem('cook','cookYes');
+            localStorage.removeItem('cookNI','cookYesNI');
             $.fancybox.close( $('.modal-cookies'));
         });
     }
     function cookSet(){
         $('.button-cookies-yes').on('click', function(){
-            localStorage.setItem('cook','cookYes');
+            localStorage.setItem('cookNI','cookYesNI');
             $.fancybox.close( $('.modal-cookies'));
         });
     }
@@ -18,7 +18,7 @@ $(document).ready(function () {
     $('.check-cookies').change(function(){
         $('.button-cookies-yes').attr('disabled', !$('.check-cookies').prop('checked'));
     });
-    if (!localStorage.getItem('cook','cookYes')){
+    if (!localStorage.getItem('cookNI','cookYesNI')){
         $.fancybox.open( $('.modal-cookies'));
         cookSet();
         cookClear();

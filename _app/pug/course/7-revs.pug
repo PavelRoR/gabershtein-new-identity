@@ -1,0 +1,16 @@
+section#revs
+	+imgs('general-img general-img-revs', 'img/images/clouds-2.svg', 'Облака')
+	.container
+		.content
+			+gt('', '', 'посмотрите отзывы', 'и результаты учеников')
+	.revs-slider-text
+		each n in [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21]
+			a.text-rev-link(href=path+"img/revs/text-"+n+".jpg" data-fancybox="text-revs"): img(src=path+"img/revs/text-"+n+".min.jpg", alt="Отзыв "+n).text-rev-img
+		//- .video-revs-arrows-2
+	.revs-slider
+		each yt, n in {1:'9yJC0xxMXC0',2: 'QsjWxnTTxPk',3: 'Zv7NAac0uxs',4:'Aslwtqgo42Q',5: '48CaJwxzLR4',6: 'XFP37dFsuw8',7: 'GDpRZRxD_As',8: 'ZLOrJwiczgM',9: 'keD_bIRvDQw',10: 'SgcGSrwr-JM', 11:'1v5el84wALM',12:'nnng6ftQmyQ'}
+			div
+				.video-wrapper.video-wrapper-revs(data-youtube=yt data-img=path+"img/revs/video-"+n+".jpg")
+					img(src=path+"img/revs/video-"+n+".jpg", alt="Отзыв "+n)
+					.play-button.play-button-rev
+		//- .video-revs-arrows-1

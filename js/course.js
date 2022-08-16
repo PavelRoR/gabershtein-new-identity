@@ -1,4 +1,13 @@
 $(document).ready(function () {
+        /* Якорь */
+        $("a[href='#price']").click(function (h) {
+            h.preventDefault();
+            var f = $(this).attr("href"),
+                g = $(f).offset().top;
+            $("body,html").animate({
+                scrollTop: g
+            }, 1500)
+        });
     function cookClear(){
         $('.button-cookies-no').on('click', function(){
             localStorage.removeItem('cookNI','cookYesNI');
