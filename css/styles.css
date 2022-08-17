@@ -692,7 +692,7 @@ section {
   margin-bottom: 10px;
   background: url("../img/icons/check.png") no-repeat top 3px left;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 991px) {
   .mob-none {
     display: none;
   }
@@ -700,7 +700,7 @@ section {
 .d-none {
   display: none;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 991px) {
   .d-none {
     display: block;
   }

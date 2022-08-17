@@ -692,7 +692,7 @@ section {
   margin-bottom: 10px;
   background: url("../img/icons/check.png") no-repeat top 3px left;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 991px) {
   .mob-none {
     display: none;
   }
@@ -700,7 +700,7 @@ section {
 .d-none {
   display: none;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 991px) {
   .d-none {
     display: block;
   }
@@ -713,9 +713,15 @@ section {
        -o-background-size: cover;
           background-size: cover;
 }
+@media screen and (max-width: 991px) {
+  #main {
+    padding: 10px 0 90px;
+  }
+}
 @media screen and (max-width: 560px) {
   #main {
     text-align: center;
+    padding: 10px 0 60px;
   }
 }
 @media screen and (max-width: 560px) {
@@ -892,6 +898,11 @@ section {
   padding: 200px 0 100px;
   position: relative;
 }
+@media screen and (max-width: 991px) {
+  #for {
+    padding: 90px 0;
+  }
+}
 @media screen and (max-width: 560px) {
   #for {
     padding: 60px 0;
@@ -960,6 +971,9 @@ section {
     -webkit-flex-wrap: wrap;
         -ms-flex-wrap: wrap;
             flex-wrap: wrap;
+    -webkit-justify-content: space-around;
+        -ms-flex-pack: distribute;
+            justify-content: space-around;
   }
 }
 .for-item {
@@ -989,14 +1003,14 @@ section {
 #plan {
   padding: 90px 0;
 }
-@media screen and (max-width: 991px) {
-  #plan {
-    padding: 90px 0 0;
-  }
-}
 @media screen and (max-width: 560px) {
   #plan {
-    padding: 40px 0 0;
+    padding: 60px 0 40px;
+  }
+}
+@media screen and (max-width: 386px) {
+  #plan {
+    padding: 40px 0;
   }
 }
 .plan-wrapper {
@@ -1087,7 +1101,7 @@ section {
 }
 @media screen and (max-width: 1199px) {
   .general-img-plan {
-    bottom: -400px;
+    bottom: -222px;
   }
 }
 @media screen and (max-width: 991px) {
@@ -1116,12 +1130,7 @@ section {
 }
 @media screen and (max-width: 560px) {
   #price {
-    padding: 60px 0;
-  }
-}
-@media screen and (max-width: 386px) {
-  #price {
-    padding: 40px 0;
+    padding: 90px 0;
   }
 }
 .price-container {
@@ -1134,6 +1143,17 @@ section {
   padding: 35px;
   background-color: #fff;
 }
+@media screen and (max-width: 991px) {
+  .price-container {
+    margin-bottom: 35px;
+  }
+}
+@media screen and (max-width: 560px) {
+  .price-container {
+    margin-bottom: 20px;
+    padding: 20px;
+  }
+}
 .cost {
   text-align: center;
   font-size: 26px;
@@ -1141,15 +1161,31 @@ section {
   margin: 20px 0 25px;
   line-height: 200%;
 }
+@media screen and (max-width: 560px) {
+  .cost {
+    font-size: 22px;
+    margin: 15px 0 20px;
+  }
+}
 .cost span {
   display: block;
   font-family: 'Beware', serif;
   font-size: 66px;
   color: #b0cbaa;
 }
+@media screen and (max-width: 560px) {
+  .cost span {
+    font-size: 46px;
+  }
+}
 .price-text {
   text-align: center;
   font-size: 26px;
+}
+@media screen and (max-width: 560px) {
+  .price-text {
+    font-size: 20px;
+  }
 }
 .price-text .date {
   display: inline-block;
@@ -1172,14 +1208,25 @@ section {
   margin-bottom: 300px;
   position: relative;
 }
-@media screen and (max-width: 560px) {
+@media screen and (max-width: 1199px) {
+  #get {
+    margin-bottom: 100px;
+  }
+}
+@media screen and (max-width: 991px) {
   #get {
     padding: 90px 0;
+    margin-bottom: 50px;
+  }
+}
+@media screen and (max-width: 560px) {
+  #get {
+    padding: 60px 0;
   }
 }
 @media screen and (max-width: 386px) {
   #get {
-    padding: 60px 0;
+    padding: 40px 0;
   }
 }
 .general-img-get {
@@ -1192,11 +1239,6 @@ section {
   z-index: 200;
 }
 @media screen and (max-width: 1199px) {
-  .general-img-get {
-    top: -10%;
-  }
-}
-@media screen and (max-width: 991px) {
   .general-img-get {
     display: none;
   }
@@ -1233,7 +1275,12 @@ section {
   }
 }
 .general-title-get {
-  margin-top: 200px;
+  margin-top: 150px;
+}
+@media screen and (max-width: 1199px) {
+  .general-title-get {
+    margin-top: 100px;
+  }
 }
 @media screen and (max-width: 991px) {
   .general-title-get {
